@@ -1,0 +1,115 @@
+* {
+  background-color: #62A87C;
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #62A87C;
+  overflow-x: hidden; 
+  overflow-x: hidden;/* Prevents horizontal scroll from white gaps */
+}
+
+/* Fix: Missing # for color code */
+h1 {
+  color: #313B72;
+}
+
+/* Fix: 'enviroment' is not a valid value — must use url() */
+div {
+  background-color: lightcyan;
+  /* background-image: url("environment.jpg"); Correct spelling & syntax */
+  background-size: cover; /* Optional: make it cover the div */
+}
+
+/* ID selector for Aryan */
+#Aryan {
+  background-color: rgb(221, 97, 118);
+  text-align: center;
+
+  /* Fix: correct spelling + use url() */
+  background-image: url("enviroment.jpg");
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+
+  /* Fix: -ms-text-size-adjust is for IE and takes percentage or none */
+  -ms-text-size-adjust: none;
+
+  /* Fix: 90px is too large unless intended — keeping it */
+  font-size: 90px;
+}
+#class{
+    font-size: 34px;
+    
+}
+/* ID selector for 'a' */
+#a {
+  font-size: 45px;
+  
+}
+
+/* Class selector for 'b' */
+.b {
+  background-color: aqua;
+  font-size: 35px;
+}
+
+/* ID selector for 'c' */
+#c {
+  font-size: 40px;
+}
+
+/* Optional styling example — commented out */
+.class {
+  background-color: #7EE081;
+  color: #313B72;
+  background-blend-mode: lighten;
+}
+.b{
+    background-color: aqua;
+    font: 100px;
+    flex-flow: inherit;
+}
+.hero {
+  background: url("1.jpg") center/cover no-repeat;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 10px rgba(116, 170, 72, 0.7) ;
+    background-blend-mode:color-dodge;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  transition: transform 0.3s;
+}
+.hero h1:hover {
+  transform: scale(1.05);
+}
+#comment{
+    font-size: 74px;
+    font-weight: 400;
+       
+
+}
+#Aryan{
+  background-image: url(7f03b9c39ac8686e033b899dfdbc8c7f.jpg) cover;
+}
+#Aryan1{
+  margin: 20px;
+  padding: 200px;
+  display: flex;
+  -ms-flex-align: center;
+}
+/* button:hover .stars{
+  display: block;
+  filter: drop-shadow(0 0 10px
+  red);
+} */
