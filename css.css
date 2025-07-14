@@ -85,6 +85,8 @@ div {
   color: white;
   text-shadow: 0 0 10px rgba(116, 170, 72, 0.7) ;
     background-blend-mode:color-dodge;
+      animation: scroll;
+  animation-timeline: view();
 }
 .hero h1 {
   font-size: clamp(2rem, 5vw, 4rem);
@@ -131,10 +133,11 @@ div {
     background-image: url(7f03b9c39ac8686e033b899dfdbc8c7f.jpg) contain;
     image-rendering:pixelated;
     opacity: 0;
+    scale: 0.2;
   }
   to {
     transform: translateZ(50px);
-    opacity: 1;
+     
     image-rendering: optimizeQuality;
     background-image: url(7f03b9c39ac8686e033b899dfdbc8c7f.jpg) contain;
   }
@@ -154,27 +157,46 @@ div {
   height: 70px;
   width: 70px;
   border-radius: 50%;
-  background-image: url("earth-globe-map-3d-rendering-M6BCP9.jpg");
+  background-image: url("earth-globe-isolated-d-cartoon-style-illustration-earth-globe-isolated-d-cartoon-style-illustration-generative-ai-325639108.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   animation-name: Animation;
   animation-duration: 2s;
-  animation-delay: 1s;
+  
   animation-fill-mode: forwards;
 }
 
 @keyframes Animation {
   from {
     transform: translateX(-100px);
+  
     opacity: 0;
   }
   to {
-    transform: translateX(150px);
+  text-align: center;
+  
+    transform: translateX(550px);
+    transform: translateY(100px);
+    transform:rotateZ(100px);
+
+        opacity: 1;
+  }
+#Log {
+  animation: i 2s forwards;
+}
+
+@keyframes i {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }
+
+
 #c {
   background: #f4fef9;
   padding: 40px;
@@ -189,6 +211,19 @@ div {
   transition: all 1s ease-out;
   opacity: 0;
   transform: translateY(40px);
+
+
+}
+@keyframes scroll {
+  from{
+    scale: 0.2;
+    opacity: 0;
+  }
+  to{
+    scale: 1;
+    opacity: 1;
+
+  }
 }
 
 #c.show {
@@ -210,4 +245,19 @@ div {
 #c ul li {
   margin: 10px 0;
 }
+div{
+  animation: SC;
 
+}
+@keyframes SC {
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+  top{
+
+    opacity: 1;
+    scale: 1;
+
+  }
+}
