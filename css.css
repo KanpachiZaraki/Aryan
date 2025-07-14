@@ -173,7 +173,7 @@ div {
     transform: translateX(-100px);
   
     opacity: 0;
-  }}
+  }
   to {
   text-align: center;
   
@@ -182,7 +182,7 @@ div {
     transform:rotateZ(100px);
 
         opacity: 1;
-  }
+  }}
 #Log {
   animation: i 2s forwards;
 }
