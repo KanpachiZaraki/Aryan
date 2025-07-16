@@ -1,81 +1,41 @@
-* {
-  background-color: #62A87C;
-
-}
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-body {
-  background-color: #62A87C;
-  overflow-x: hidden; 
-  overflow-x: hidden;/* Prevents horizontal scroll from white gaps */
-}
-
-/* Fix: Missing # for color code */
-h1 {
-  color: #313B72;
-}
-
-/* Fix: 'enviroment' is not a valid value — must use url() */
-div {
-  background-color: lightcyan;
-  /* background-image: url("environment.jpg"); Correct spelling & syntax */
-  background-size: cover; /* Optional: make it cover the div */
-}
-
-/* ID selector for Aryan */
-#Aryan {
-  background-color: rgb(221, 97, 118);
-  text-align: center;
-
-  /* Fix: correct spelling + use url() */
-  background-image: url("enviroment.jpg");
-  min-height: 35vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-
-  /* Fix: -ms-text-size-adjust is for IE and takes percentage or none */
-  -ms-text-size-adjust: none;
-
-  /* Fix: 90px is too large unless intended — keeping it */
-  font-size: 90px;
-}
-#class{
-    font-size: 34px;
-    
-}
-/* ID selector for 'a' */
-#a {
-  font-size: 45px;
   
 }
-
-/* Class selector for 'b' */
-.b {
-  background-color: aqua;
-  font-size: 35px;
+.Environment {
+  text-decoration-color: wheat;
+  background-color: rgb(90, 133, 94);
 }
 
-/* ID selector for 'c' */
-#c {
-  font-size: 40px;
+:root {
+  --primary: #44a765;       /* Forest green */
+  --accent: #A4DE02;         /* Bright lime green */
+  --bg-light: #F6FFF8;       /* Very light green */
+  --text-dark: #2F2F2F;      /* Charcoal gray */
+  --heading: #2cac48;        /* Dark green */
+  --highlight: #B9FBC0;      /* Minty green */
 }
 
-/* Optional styling example — commented out */
-.class {
-  background-color: #7EE081;
-  color: #313B72;
-  background-blend-mode: lighten;
+body {
+  background-color: var(--bg-light);
+  background: linear-gradient(to button, #a8e6a1 , #ffffff);
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+  background-image: url(4483a435-1127-4e38-bf58-f43cc6c70842.jfif);
+
+
 }
-.b{
-    background-color: aqua;
-    font: 100px;
-    flex-flow: inherit;
+
+h1, h2, h3 {
+  color: var(--heading);
 }
+
+/* Hero Section */
+
+
 .hero {
   background: url("1.jpg") center/cover no-repeat;
   min-height: 70vh;
@@ -83,149 +43,159 @@ div {
   align-items: center;
   justify-content: center;
   color: white;
-  text-shadow: 0 0 10px rgba(116, 170, 72, 0.7) ;
-    background-blend-mode:color-dodge;
-      animation: scroll;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  animation: scroll ;
   animation-timeline: view();
+  
 }
+
 .hero h1 {
   font-size: clamp(2rem, 5vw, 4rem);
   transition: transform 0.3s;
 }
+
 .hero h1:hover {
   transform: scale(1.05);
 }
-#comment{
-    font-size: 74px;
-    font-weight: 400;
-       
 
-}
-
-#Aryan1{
-  margin: 20px;
-  padding: 200px;
-  display: flex;
-  -ms-flex-align: center;
-}
-/* button:hover .stars{
-  display: block;
-  filter: drop-shadow(0 0 10px
-  red);
-} */
-#Aryan {
-  
-  
-  image-resolution: inherit;
-  font-size: 30px;
-  color: white;
-  text-shadow: 2px 2px 6px black;
-  position: relative;
-  z-index: 10;
-  animation-name: Arya;
-  animation-duration: 2s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes Arya {
-  from {
-    background-image: url(7f03b9c39ac8686e033b899dfdbc8c7f.jpg) contain;
-    image-rendering:pixelated;
-    opacity: 0;
-    scale: 0.2;
-  }
-  to {
-    transform: translateZ(50px);
-     
-    image-rendering: optimizeQuality;
-    background-image: url(7f03b9c39ac8686e033b899dfdbc8c7f.jpg) contain;
-  }
-}
+/* Globe Section */
 .circle {
-  margin: 0;
-  padding: 0;
-  background-color: #62A87C;
   height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--primary);
+  background-image: url(4483a435-1127-4e38-bf58-f43cc6c70842.jfif);
 }
 
-.globe {
-  margin: 10px;
+/* .globe {
   height: 70px;
   width: 70px;
   border-radius: 50%;
   background-image: url("earth-globe-isolated-d-cartoon-style-illustration-earth-globe-isolated-d-cartoon-style-illustration-generative-ai-325639108.webp");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  animation: Animation 2s forwards;
 
-  animation-name: Animation;
-  animation-duration: 2s;
-  
-  animation-fill-mode: forwards;
+} */
+.globe-container {
+  perspective: 800px; /* enables 3D depth */
+  display: inline-block;
 }
+
+.globe {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-image: url("earth-globe-isolated-d-cartoon-style-illustration-earth-globe-isolated-d-cartoon-style-illustration-generative-ai-325639108.webp");
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  animation: spinGlobe 5s linear infinite;
+  transform-style: preserve-3d;
+  
+  
+  animation: spinGlobe 5s linear infinite, float 3s ease-in-out infinite;
+}
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateY(10deg);
+  }
+}
+
+
+/* 3D hover pop-out effect */
+.globe:hover {
+  transform: rotateY(20deg) rotateX(10deg) scale(1.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Continuous spinning animation */
+@keyframes spinGlobe {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.globe:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #2cac48;
+
+  from{
+    
+    scale: 0;
+  }
+  to{
+    transform: translateZ(100px);
+
+    scale: 1;
+  }
+}
+
+
+/* 
 
 @keyframes Animation {
   from {
-    transform: translateX(-100px);
-  
+    transform: translateY(-100px);
     opacity: 0;
   }
   to {
-  text-align: center;
-  
-    transform: translateX(550px);
-    transform: translateY(100px);
-    transform:rotateZ(100px);
+    transform: translateX(100px);
 
-        opacity: 1;
-  }}
-#Log {
-  animation: i 2s forwards;
-}
-
-@keyframes i {
-  from {
-    opacity: 0;
-  }
-  to {
     opacity: 1;
   }
-}
+} */
 
-
+/* Main Section Content */
 #c {
-  background: #f4fef9;
-  padding: 40px;
-  border-radius: 20px;
-  color: #2c3e50;
+  background: white;
+  font-weight: bolder;
+
+  color: wheat;
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.7;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  margin: 50px auto;
-  width: 100%;
-  max-width: 800px;
-  transition: all 1s ease-out;
-  opacity: 0;
+  animation: bounceIn 1s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0%;
+  animation-duration: 5s;
+
+  
+  opacity: 1;
   transform: translateY(40px);
-
-
+  transition: all 1s ease-out;
+  background-color: cadetblue;
 }
-@keyframes scroll {
-  from{
-    scale: 0.2;
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
     opacity: 0;
   }
-  to{
-    scale: 1;
+  50% {
+    transform: scale(1.05);
     opacity: 1;
-
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
   }
 }
+.He{
 
+  background-color: skyblue;
+  background-image: url();
+}
 #c.show {
   opacity: 1;
   transform: translateY(0);
@@ -233,7 +203,7 @@ div {
 
 #c h2 {
   font-size: 28px;
-  color: #006a4e;
+  color: var(--primary);
   margin-bottom: 20px;
 }
 
@@ -245,19 +215,101 @@ div {
 #c ul li {
   margin: 10px 0;
 }
-div{
-  animation: SC;
 
-}
-@keyframes SC {
-  from{
+/* Animation Keyframes */
+@keyframes scroll {
+  from {
+    transform: scale(0.2);
     opacity: 0;
-    scale: 0.5;
   }
-  top{
-
+  to {
+    transform: scale(1);
     opacity: 1;
-    scale: 1;
-
   }
+}
+
+@keyframes SC {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Section Styling Examples */
+#Aryan {
+  background-image: url("enviroment.jpg");
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px black;
+  animation: Arya 3s 0s forwards;
+}
+.Environment::before{
+  filter: blur(2px) brightness(0.6);
+}
+.X{
+  background-color: springgreen;
+  text-decoration-color: black;
+}
+@keyframes Arya {
+  from {
+    background-image: url("7f03b9c39ac8686e033b899dfdbc8c7f.jpg");
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  to {
+    
+    transform: translateZ(50px);
+    opacity: 1;
+  }
+}
+
+/* Optional Text Sections */
+#Aryan1 {
+  margin: 20px;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+}
+
+#comment {
+  font-size: 74px;
+  font-weight: 400;
+}
+
+#a {
+  font-size: 45px;
+}
+
+#class {
+  font-size: 34px;
+}
+
+.b {
+  background-color: var(--highlight);
+  font-size: 35px;
+}
+
+/* Buttons */
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--accent);
 }
