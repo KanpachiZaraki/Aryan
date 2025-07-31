@@ -20,65 +20,60 @@
     }
   </style>
 </head>
-<body class="bg-grey-100 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
   <!-- Navigation Bar -->
-
   <nav class="w-full bg-green-100 shadow">
-    <div class="left"> Gyan Niketan</div>
-    <div class="p-4 flex gap-10 justify-end">
-      <a href="#" class="text-black text-2xl font-semibold hover-border">Home</a>
-      <a href="#" class="text-black text-2xl font-semibold hover-border">Gallery</a>
-      <a href="#" class="text-black text-2xl font-semibold hover-border">Inventory</a>
-      <a href="#" class="text-black text-2xl font-semibold hover-border">About Us</a>
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center flex-wrap">
+      <div class="text-xl font-bold text-green-800">Gyan Niketan</div>
+      <div class="flex gap-6 mt-3 sm:mt-0 flex-wrap justify-end">
+        <a href="#" class="text-black text-base sm:text-xl font-semibold hover-border">Home</a>
+        <a href="#" class="text-black text-base sm:text-xl font-semibold hover-border">Gallery</a>
+        <a href="#" class="text-black text-base sm:text-xl font-semibold hover-border">Inventory</a>
+        <a href="#" class="text-black text-base sm:text-xl font-semibold hover-border">About Us</a>
+      </div>
     </div>
   </nav>
-  <!-- end of nav bar -->
+  <!-- End of Nav -->
 
   <!-- Heading Section -->
-   <div></div>
-  <div class="border border-gray-300 p-6 text-center animate-bounce hover:shadow-xl font-medium mt-6 mx-auto max-w-xl"; data-Aos=fade-up>
-    What is Spiral Biodiversity
+  <div class="container mx-auto px-4 mt-6">
+    <div data-aos="fade-up" class="border border-gray-300 p-6 text-center animate-bounce hover:shadow-xl font-medium max-w-xl mx-auto text-lg sm:text-xl">
+      What is Spiral Biodiversity
+    </div>
+
+    <div data-aos="fade-right" data-aos-duration="300" class="mt-6 text-gray-800 font-semibold text-base sm:text-lg">
+      Spiral Biodiversity is not a standard scientific term, but it can be interpreted creatively and scientifically to represent the natural spiral patterns found in living organisms and how these patterns reflect the diversity, growth, and evolution of life.
+    </div>
+
+    <!-- Second Paragraph -->
+    <div class="mt-6 text-gray-800 font-semibold text-base sm:text-lg">
+      <p class="mb-2 font-bold">Interpretation of “Spiral Biodiversity”</p>
+      <p class="mb-2"><strong>1. Spirals in Nature Reflecting Biodiversity</strong></p>
+      <p>Nature uses spirals as efficient patterns in many living forms. These spirals are part of biodiversity because they appear in plants, animals, shells, galaxies, and even DNA.</p>
+      <ul class="list-disc pl-6 mt-2">
+        <li>Fibonacci spirals in sunflower seeds, pinecones, and cacti.</li>
+        <li>DNA double helix — the blueprint of life is a spiral.</li>
+        <li>Snail shells and ram horns grow in logarithmic spirals.</li>
+        <li>Galaxy arms — the universe itself follows spiral biodiversity.</li>
+      </ul>
+      <p class="mt-2">This shows how spirals unite mathematics, biology, and natural design, all key parts of biodiversity.</p>
+    </div>
+
+    <!-- Third Section -->
+    <div class="mt-6 text-gray-800 font-semibold text-base sm:text-lg" data-aos="fade-left">
+      <p><strong>2. Symbol of Life’s Growth and Evolution</strong></p>
+      <p>A spiral can represent evolution, interconnectedness, and growth — all of which are central to biodiversity. As you move outward in a spiral, you see complexity increase — just like life evolved from single-celled organisms to diverse ecosystems.</p>
+    </div>
   </div>
-  <div data-Aos="fade-right" data-aos=" duration-300" class="text-gray-800 font-semibold">
-    Spiral Biodiversity is not a standard scientific term, but it can be interpreted creatively and scientifically to represent the natural spiral patterns found in living organisms and how these patterns reflect the diversity, growth, and evolution of life.
-  </div>
-  <!-- this is 2para line of the web -->
-  <div class="mt-6 text-gray-800 font-semibold">
-     Interpretation of “Spiral Biodiversity”
- 1. Spirals in Nature Reflecting Biodiversity
-Nature uses spirals as efficient patterns in many living forms. These spirals are part of biodiversity because they appear in plants, animals, shells, galaxies, and even DNA.
-<pre></pre>
-Examples:
 
-Fibonacci spirals in sunflower seeds, pinecones, and cacti.
-
-DNA double helix — the blueprint of life is a spiral.
-
-Snail shells and ram horns grow in logarithmic spirals.
-
-Galaxy arms — the universe itself follows spiral biodiversity.
-
- This shows how spirals unite mathematics, biology, and natural design, all key parts of biodiversity.
-  </pre> </div>
-  <!-- this is where it ends -->
-   <!-- there is aother one -->
-   <div  class="mt-6 text-gray-800 font-semibold">
-    <p> 2. Symbol of Life’s Growth and Evolution
-A spiral can represent evolution, interconnectedness, and growth — all of which are central to biodiversity. As you move outward in a spiral, you see complexity increase — just like life evolved from single-celled organisms to diverse ecosystems.</p>
-   </div>
-
-   <div>
-    
-   </div>
-
-<script>
-  AOS.init({
-    duration: 1000, // animation duration in ms
-    offset: 120,    // offset (in px) from the original trigger point
-    once: true,     // whether animation should happen only once
-  });
-</script>
-
+  <!-- AOS Init -->
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 120,
+      once: true,
+    });
+  </script>
 </body>
 </html>
